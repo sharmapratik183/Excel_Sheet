@@ -1,0 +1,28 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.navbar_container{
+    width: 100%;
+    background-color: #6d6e71;
+    height: 9vh;
+    text-align: left;
+}
+
+/* .navbar_container img{
+    width: 3vw;
+    border-radius: 100%;
+    margin: 0.5rem;
+    
+} */
+
+.text_container p{
+    color: pink;
+    display: inline-block;
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-top: 0.7rem;
+    margin-left: 1rem;
+
+}
