@@ -3,8 +3,8 @@ import "./Sheet.css";
 import { S3 } from "aws-sdk";
 
 const s3 = new S3({
-  accessKeyId: "AKIAQ7KCSWGNCNHKV67E",
-  secretAccessKey: "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",
+  accessKeyId: "ABC",
+  secretAccessKey: "DEF",
   region: "us-east-1",
 });
 
