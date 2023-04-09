@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import "./Upload.css";
 import H1 from "../../Utils/Images/H1.jpg";
-import Excel from "../Excel/Excel";
+
 import Image_slider from "../Image_slider/Image_slider";
+import Sheet from "../Sheet/Sheet";
 
 const Upload = () => {
   const [content, setContent] = useState("");
@@ -10,6 +11,18 @@ const Upload = () => {
   const handleInput = (event) => {
     setContent(event.target.value);
   };
+
+  const divRef = useRef(null);
+
+  function handleFocus(event) {
+    // Set the selection range to the beginning of the content
+    const selection = window.getSelection();
+    const range = document.createRange();
+    range.setStart(divRef.current, 0);
+    range.collapse(true);
+    selection.removeAllRanges();
+    selection.addRange(range);
+  }
 
   return (
     <>
@@ -24,10 +37,10 @@ const Upload = () => {
         <div className="whatsapp">
             <p>Write Your WhatsApp Message</p>
         </div>
-          <div contentEditable="true" onInput={handleInput} className="editable">
-            <p>{content}</p>
+          <div contentEditable="true" ref={divRef} onFocus={handleFocus} className="editable">
+            <p>This div is editable</p>
           </div>
-          <Excel />
+          <Sheet/>
         </div>
       </div>
     </>

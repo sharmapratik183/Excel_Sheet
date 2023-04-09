@@ -43,11 +43,11 @@
     font-size: 1.5rem;
     padding: 1rem;
     border-radius: 10px;
-    box-shadow: 2px 2px 0 #fff, -2px -2px 0 #fff, 2px -2px 0 #fff, -2px 2px 0 #fff; /* set the box shadow with offset and color */
-    transition: box-shadow 0.2s ease-in-out; /* add a transition for smooth animation */
+    box-shadow: 2px 2px 0 #fff, -2px -2px 0 #fff, 2px -2px 0 #fff, -2px 2px 0 #fff; 
+    transition: box-shadow 0.2s ease-in-out; 
   }
   
-  .three-dee-div:focus {
+  .editable:focus {
     outline: none; /* remove the default focus outline */
     box-shadow: 4px 4px 0 #fff, -4px -4px 0 #fff, 4px -4px 0 #fff, -4px 4px 0 #fff, 0px 0px 5px #333; /* set the box shadow with larger offset and darker color */
   }
